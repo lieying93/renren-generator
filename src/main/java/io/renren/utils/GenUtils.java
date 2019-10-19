@@ -117,6 +117,7 @@ public class GenUtils {
         map.put("author", config.getString("author" ));
         map.put("email", config.getString("email" ));
         map.put("datetime", DateUtils.format(new Date(), DateUtils.DATE_TIME_PATTERN));
+        map.put("menuParentId",UUID.randomUUID().toString().replace("-","").toUpperCase());
         VelocityContext context = new VelocityContext(map);
 
         //获取模板列表
